@@ -287,6 +287,35 @@
   color: #ffffff;
 }
 
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 120;
+  padding: 16px;
+}
+
+.modal-content {
+  background: #2f2f35;
+  border: 1px solid #c41e3a;
+  border-radius: 14px;
+  padding: 24px;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #d4d0e0;
+}
+
+.modal-content p {
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
 /* Utils */
 .hidden { display: none; }
 .flex-between { display: flex; justify-content: space-between; align-items: center; }

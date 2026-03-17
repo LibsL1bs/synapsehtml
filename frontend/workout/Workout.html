@@ -60,18 +60,49 @@
             </div>
         </div>
 
+        <div
+            id="noExerciseModal"
+            class="modal hidden"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="noExerciseModalMessage"
+        >
+            <div class="modal-content">
+                <p id="noExerciseModalMessage">Adicione um exercicio antes de iniciar o timer</p>
+                <button id="closeModalBtn" class="btn outline">Entendi</button>
+            </div>
+        </div>
+
         <script>
             const exList = document.getElementById("exList");
             const addEx = document.getElementById("addEx");
             const startBtn = document.getElementById("startBtn");
             const finishBtn = document.getElementById("finishBtn");
             const timerEl = document.getElementById("timer");
+            const noExerciseModal = document.getElementById("noExerciseModal");
+            const closeModalBtn = document.getElementById("closeModalBtn");
 
             let exercises = [];
 
             let running = false;
             let seconds = 0;
             let timerId = null;
+
+            const showNoExerciseModal = () => {
+                noExerciseModal.classList.remove("hidden");
+            };
+
+            const hideNoExerciseModal = () => {
+                noExerciseModal.classList.add("hidden");
+            };
+
+            closeModalBtn.addEventListener("click", hideNoExerciseModal);
+
+            noExerciseModal.addEventListener("click", (event) => {
+                if (event.target === noExerciseModal) {
+                    hideNoExerciseModal();
+                }
+            });
 
             function formatTime(s) {
                 const h = Math.floor(s / 3600);
@@ -213,6 +244,11 @@ Remover
 
             startBtn.addEventListener("click", () => {
                 if (running) return;
+
+                if (exercises.length === 0) {
+                    showNoExerciseModal();
+                    return;
+                }
 
                 running = true;
 
