@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Synapse - Chat</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="Chat.css">
+</head>
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+      <div class="logo">Synapse</div>
+      <div class="nav-menu">
+        <a href="../workout/Workout.html" class="nav-item">
+          <span>🏋️</span> Treino
+        </a>
+        <a href="../chat/Chat.html" class="nav-item active">
+          <span>💬</span> Chat
+        </a>
+        <a href="../history/History.html" class="nav-item">
+          <span>📊</span> Histórico
+        </a>
+        <a href="../notes/Notes.html" class="nav-item">
+          <span>📝</span> Notas
+        </a>
+        <a href="../profile/Profile.html" class="nav-item">
+          <span>👤</span> Perfil
+        </a>
+      </div>
+    </nav>
+
+    <div class="main-content">
+      <header class="header"><div class="brand">Synapse</div></header>
+
+      <main class="chat-main">
+    <div id="messages" class="messages"></div>
+    <div class="suggestions" id="suggestions"></div>
+    <div class="inputRow">
+      <input id="input" type="text" placeholder="Digite sua mensagem..." />
+      <button id="sendBtn" class="btn">Enviar</button>
+    </div>
+      </main>
+  </div>
+  <script src="chat.js"></script>
+  <!-- <script>
+    const messagesEl = document.getElementById('messages');
+    const inputEl = document.getElementById('input');
+    const sendBtn = document.getElementById('sendBtn');
+    const suggestionsEl = document.getElementById('suggestions');
+
+    const initialMessages = [
+      {id:'1',role:'assistant',content:'Olá! Sou o Synapse, sua IA especializada em powerlifting. Como posso ajudar você hoje?',timestamp:new Date()}
+    ];
+
+    let messages = [...initialMessages];
+
+    function renderMessages(){
+      messagesEl.innerHTML = '';
+      messages.forEach(m=>{
+        const el = document.createElement('div');
+        el.className = 'message ' + (m.role === 'user' ? 'user' : 'assistant');
+        el.innerHTML = '<div class="bubble">'+m.content+'<div class="ts">'+new Date(m.timestamp).toLocaleTimeString()+'</div></div>';
+        messagesEl.appendChild(el);
+      });
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }
+
+    function addMessage(role, content){
+      messages.push({id:Date.now().toString(), role, content, timestamp:new Date()});
+      renderMessages();
+    }
+
+    sendBtn.addEventListener('click', ()=>{
+      const val = inputEl.value.trim();
+      if(!val) return;
+      addMessage('user', val);
+      inputEl.value = '';
+      // simulate AI
+      setTimeout(()=>{
+        addMessage('assistant', 'Entendi. Vou sugerir um próximo treino baseado no seu histórico.');
+      }, 900);
+    });
+
+    // quick suggestions
+    ['Analisar meu último treino','Sugerir próximo treino','Ver meu perfil anatômico'].forEach(s=>{
+      const b = document.createElement('button');
+      b.className = 'chip';
+      b.textContent = s;
+      b.onclick = ()=>{ inputEl.value = s; };
+      suggestionsEl.appendChild(b);
+    });
+
+    renderMessages();
+  </script> -->
+</body>
+</html>

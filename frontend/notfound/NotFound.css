@@ -1,0 +1,54 @@
+/* Per-page styles for NotFound.html */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 24px;
+}
+.card {
+    max-width: 600px;
+    padding: 48px 24px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    text-align: center;
+    backdrop-filter: blur(8px);
+}
+.nf-title {
+    font-size: 72px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    background: linear-gradient(90deg, #6b46c1, #dd6b20);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.nf-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 12px;
+}
+.muted {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #6b46c1, #dd6b20);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(107, 70, 193, 0.3);
+}

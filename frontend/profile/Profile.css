@@ -1,0 +1,256 @@
+/* Per-page styles for Profile.html — Dark Theme (Synapse) */
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background: #2a2a2e;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: linear-gradient(
+    180deg,
+    rgba(107, 42, 42, 0.35),
+    rgba(42, 42, 46, 0.95)
+  );
+  border-right: 1px solid #3a3a42;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 30;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+  background: linear-gradient(90deg, #c41e3a, #6b2a2a);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 24px;
+}
+
+/* Navigation */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #b8b4c6;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.nav-item:hover {
+  background: rgba(196, 30, 58, 0.15);
+  color: #d4d0e0;
+  border-color: rgba(196, 30, 58, 0.4);
+}
+
+.nav-item.active {
+  background: linear-gradient(
+    135deg,
+    rgba(196, 30, 58, 0.35),
+    rgba(107, 42, 42, 0.25)
+  );
+  color: #ffffff;
+  border-color: rgba(196, 30, 58, 0.6);
+  font-weight: 600;
+}
+
+.nav-item span {
+  font-size: 16px;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 240px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background: #323238;
+  border-bottom: 1px solid #3a3a42;
+  margin: 0 0 24px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+  background: linear-gradient(90deg, #c41e3a, #6b2a2a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Container */
+.container {
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cards */
+.profile-card,
+.card {
+  background: #323238;
+  border: 1px solid #3a3a42;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.profile-card {
+  text-align: center;
+}
+
+/* Profile */
+.profile-row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 40px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.profile-avatar {
+  background: linear-gradient(135deg, #c41e3a, #6b2a2a);
+  margin-bottom: 25px;
+}
+
+.profile-info {
+  text-align: left;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #d4d0e0;
+  margin: 0;
+}
+
+.profile-email {
+  color: #b8b4c6;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Card content */
+.card-title {
+  font-weight: 700;
+  font-size: 15px;
+  color: #d4d0e0;
+  margin: 0 0 16px;
+}
+
+/* Grid / Stats */
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.stat-box {
+  background: #2f2f35;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: 1px solid #3a3a42;
+}
+
+.stat-box:hover {
+  background: #3a3a42;
+  transform: translateY(-4px);
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 18px;
+  background: linear-gradient(90deg, #c41e3a, #6b2a2a);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #b8b4c6;
+  margin-top: 6px;
+}
+
+/* Text helpers */
+.muted {
+  color: #b8b4c6;
+  font-size: 13px;
+}
+
+.small-meta {
+  font-size: 12px;
+  color: #9c98aa;
+}
+
+.h3 {
+  margin: 0 0 12px;
+  font-weight: 600;
+  color: #d4d0e0;
+}
+
+/* Utilities */
+.mt-12 {
+  margin-top: 12px;
+}
+
+.p-16 {
+  padding: 32px 32px 48px 32px;
+}
+
+.flex-row {
+  display: flex;
+  gap: 12px;
+}
+
+.mini {
+  background: #2f2f35;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #b8b4c6;
+  border: 1px solid #3a3a42;
+}

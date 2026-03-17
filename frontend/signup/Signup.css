@@ -1,0 +1,151 @@
+/* Per-page styles for Signup.html — Dark Theme (Synapse) */
+
+body {
+  background: #2a2a2e;
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.center-form {
+  max-width: 420px;
+  margin: 60px auto;
+}
+
+/* Card */
+.card {
+  background: #323238;
+  border: 1px solid #3a3a42;
+  padding: 32px;
+  border-radius: 16px;
+}
+
+/* Titles */
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #d4d0e0;
+}
+
+.subtitle {
+  color: #b8b4c6;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+/* Inputs */
+.field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #3a3a42;
+  font-size: 14px;
+  background: #2f2f35;
+  color: #d4d0e0;
+  transition: all 0.2s ease;
+}
+
+.field::placeholder {
+  color: #9c98aa;
+}
+
+.field:focus {
+  outline: none;
+  border-color: #c41e3a;
+  box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.25);
+}
+
+.field.error {
+  border-color: #c94a4a;
+}
+
+/* Labels & text */
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #d4d0e0;
+}
+
+.muted {
+  color: #b8b4c6;
+  font-size: 14px;
+}
+
+/* Requirements */
+#requirements .muted {
+  margin-bottom: 8px;
+  display: block;
+}
+
+#reqList {
+  margin: 10px 0 0 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#reqList li {
+  font-size: 13px;
+  color: #b8b4c6;
+  margin-bottom: 6px;
+  padding-left: 20px;
+  position: relative;
+}
+
+#reqList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #9c98aa;
+}
+
+#reqList li.met::before {
+  color: #3a7f5f;
+  font-weight: bold;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #c41e3a, #6b2a2a);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Links */
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #b8b4c6;
+}
+
+.login-link a {
+  color: #c41e3a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Spacing utils */
+.mt-12 { margin-top: 12px; }
+.mb-8 { margin-bottom: 8px; }

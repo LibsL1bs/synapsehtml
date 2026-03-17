@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Synapse - Criar conta</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="Signup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Criar conta</h1>
+    <div class="card mt-12">
+      <form id="signupForm">
+        <div class="mb-8"><label>Nome completo</label><input id="name" required class="field" /></div>
+        <div class="mb-8"><label>E-mail</label><input id="email" type="email" required class="field" /></div>
+        <div class="mb-8"><label>Senha</label><input id="pwd" type="password" required class="field" /></div>
+        <div class="mb-8"><label>Confirmar senha</label><input id="pwd2" type="password" required class="field" /></div>
+
+        <div id="requirements" class="mb-8">
+          <div class="muted">Requisitos de senha:</div>
+          <ul id="reqList"><li>Mínimo 8 caracteres</li><li>Uma letra maiúscula</li><li>Um número</li></ul>
+        </div>
+
+        <button class="btn" type="submit">Criar conta</button>
+      </form>
+
+      <p class="muted mt-12">Já tem uma conta? <a href="Login.html">Entrar</a></p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    const pwd = document.getElementById('pwd');
+    const pwd2 = document.getElementById('pwd2');
+
+    function passwordValid(p){
+      return p.length >= 8 && /[A-Z]/.test(p) && /[0-9]/.test(p);
+    }
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      if (pwd.value !== pwd2.value) { alert('As senhas não coincidem.'); return; }
+      if (!passwordValid(pwd.value)) { alert('Senha não atende aos requisitos.'); return; }
+      setTimeout(()=>{ alert('Conta criada! Bem-vindo ao Synapse.'); window.location.href='Chat.html'; }, 900);
+    });
+  </script>
+</body>
+</html>
