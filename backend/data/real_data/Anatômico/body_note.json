@@ -1,4 +1,8 @@
 {
+  "nome": "medidas corporais",
+  "tipo": "anotacao",
+  "data": "2026-02-24",
+  "conteudo": {
     "last_update": "date",
     "weight": 80,
     "body_fat": 20,
@@ -9,4 +13,5 @@
     "thigh_size": 60,
     "quadriceps_size": 55,
     "notes": "notes"
+  }
 }
