@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Synapse Admin - Painel de Controle</title>
+        <link rel="stylesheet" href="../styles.css" />
+        <link rel="stylesheet" href="Index.css" />
+    </head>
+    <body>
+        <div class="admin-layout">
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <div class="sidebar-logo">Synapse Admin</div>
+                    <div class="sidebar-sub">Painel de Controle</div>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Principal</div>
+                    <button class="nav-item active" data-page="dashboard">
+                        <i>📊</i>
+                        Visão Geral
+                    </button>
+                    <button class="nav-item" data-page="usuarios">
+                        <i>👥</i>
+                        Gerenciar Usuários
+                    </button>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title">Configurações</div>
+                    <button class="nav-item" data-page="configuracoes">
+                        <i>⚙️</i>
+                        Configurações Gerais
+                    </button>
+                    <button class="nav-item" data-page="permissoes">
+                        <i>🔐</i>
+                        Permissões
+                    </button>
+                </div>
+            </aside>
+            <main class="admin-content" id="mainContent"></main>
+        </div>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Detalhes do Registro</h3>
+                    <button class="modal-close" onclick="closeModal()">×</button>
+                </div>
+                <div class="modal-body" id="modalBody"></div>
+            </div>
+        </div>
+
+        <div class="toast" id="toast"></div>
+
+        <footer
+            style="
+                border-top: 1px solid #3a3a42;
+                padding: 16px 24px;
+                text-align: center;
+                color: #9c98aa;
+                background: #23232a;
+                margin-left: 280px;
+            "
+        >
+            © 2026 Synapse Admin - Todos os direitos reservados.
+        </footer>
+        <script src="adm.js"></script>
+        <link rel="stylesheet" href="adm.css" />
+    </body>
+</html>
