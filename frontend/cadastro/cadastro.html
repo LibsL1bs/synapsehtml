@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Synapse - Login</title>
+        <link rel="stylesheet" href="../cadastro.css" />
+        <link rel="stylesheet" href="Login.css" />
+    </head>
+    <body>
+        <div class="split">
+            <aside class="left">
+                <div class="brand">Synapse</div>
+                <h1 class="title">Sua IA para <span class="gradient-text">Powerlifting</span></h1>
+                <p class="muted intro">
+                    Memória robusta sobre seu perfil psicológico e anatômico. Treinos personalizados e acompanhamento
+                    inteligente.
+                </p>
+            </aside>
+
+            <main class="right">
+                <div class="card">
+                    <div class="mb-16">
+                        <h2 class="section-title">Cadastre-se</h2>
+                        <p class="muted no-margin">Crie sua conta para começar a treinar</p>
+                    </div>
+
+                    <form id="loginForm">
+                        <div class="mb-12">
+                            <label class="label">Nome completo</label>
+                            <input
+                                id="nome"
+                                type="nome"
+                                required
+                                placeholder="Insira seu nome completo"
+                                class="field"
+                            />
+                        </div>
+
+                        <form id="loginForm">
+                            <div class="mb-12">
+                                <label class="label">E-mail</label>
+                                <input id="email" type="email" required placeholder="seu@email.com" class="field" />
+                            </div>
+
+                            <div class="mb-12">
+                                <label class="label">Senha</label>
+                                <div class="relative">
+                                    <input
+                                        id="password"
+                                        type="password"
+                                        required
+                                        placeholder="••••••••"
+                                        class="field"
+                                    />
+                                    <button type="button" id="togglePwd" class="toggle">Mostrar</button>
+                                </div>
+                            </div>
+
+                            <div class="mt-8">
+                                <button id="submitBtn" class="btn" type="submit">Cadastrar</button>
+                                <span id="loading" class="loading">Cadastrando...</span>
+                            </div>
+                        </form>
+                        <script src="Cadastro.js"></script>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
